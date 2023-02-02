@@ -1,21 +1,28 @@
-import React from 'react';
+import React, { useState} from 'react';
 import PropTypes from 'prop-types';
 
 
 const GreetingsF = (props) => {
+    const [age, setage] = useState(29);
+
+    const birthday = () => {
+        // actualizamos el State
+        setage(age + 1);
+    }
+
     return (
         <div>
             <h1>
                 HELLO { props.name} from functional component
             </h1>
-            {/*<h2>
-                Tu edad es de: { this.state.age}
+            <h2>
+                You age: { age }
             </h2>
             <div>
-                <button onClick={this.birthday}>
+                <button onClick={birthday}>
                     Turn...
                 </button>
-            </div>  */}          
+            </div>     
         </div>
     );
 };
