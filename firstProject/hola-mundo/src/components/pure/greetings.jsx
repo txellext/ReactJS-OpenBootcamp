@@ -15,10 +15,10 @@ class Greetings extends Component {
         return (
             <div>
                 <h1>
-                    HOLA { this.props.name}
+                    HELLO { this.props.name}
                 </h1>
                 <h2>
-                    Tu edad es de: { this.state.age}
+                    Your age is: { this.state.age}
                 </h2>
                 <div>
                     <button onClick={this.birthday}>
