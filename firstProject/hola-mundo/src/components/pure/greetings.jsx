@@ -20,6 +20,11 @@ class Greetings extends Component {
                 <h2>
                     Tu edad es de: { this.state.age}
                 </h2>
+                <div>
+                    <button onClick={this.birthday}>
+                        Turn...
+                    </button>
+                </div>
             </div>
         );
     }
