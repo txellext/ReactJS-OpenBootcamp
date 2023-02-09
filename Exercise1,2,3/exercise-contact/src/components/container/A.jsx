@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Contact } from '../../models/contact.class';
+import B from '../pure/B';
 
 
 const A = (contact) => {
@@ -17,6 +18,7 @@ const A = (contact) => {
             </h2>
             <h2>
                 Connected: { contact.connected }
+                <B></B>
             </h2>
         </div>
     );
