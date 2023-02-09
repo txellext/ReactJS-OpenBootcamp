@@ -17,8 +17,7 @@ const A = (contact) => {
                 Email: { contact.email }
             </h2>
             <h2>
-                Connected: { contact.connected }
-                <B></B>
+                <B state={true} ></B>
             </h2>
         </div>
     );
