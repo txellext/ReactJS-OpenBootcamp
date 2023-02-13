@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
-import Ejemplo1 from './hooks/Ejemplo1';
+//import Example1 from './hooks/Example1';
+import Example2 from './hooks/Example2';
 
 function App() {
   return (
@@ -8,7 +9,8 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         {/* Exemples of hooks uses */}
-        <Ejemplo1></Ejemplo1>
+        {/*<Example1></Example1>*/}
+        <Example2></Example2>
       </header>
     </div>
   );

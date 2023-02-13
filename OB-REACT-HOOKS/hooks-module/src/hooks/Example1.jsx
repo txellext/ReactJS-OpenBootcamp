@@ -4,7 +4,7 @@
   */ 
 import React, { useState } from 'react';
 
-const Ejemplo1 = () => {
+const Example1 = () => {
 
     // Define an initial value for a counter
     const initialValue = 0;
@@ -61,4 +61,4 @@ const Ejemplo1 = () => {
     );
 }
 
-export default Ejemplo1;
+export default Example1;
