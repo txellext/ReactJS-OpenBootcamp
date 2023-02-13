@@ -37,18 +37,43 @@ const Example2 = () => {
      * In each change in the component state will be executed what is inside useEffect()
      */
 
+    //useEffect(() => {
+    //  console.log('component state changed');
+    //  console.log('Showing reference of DOM element')
+    //  console.log(myRef);
+    //})
+
+    /**
+     * ? Case 2: execute only when counter 1 is changed
+     * Every time counter1 is changed, useEffect will be executed
+     * If there is a change in counter2, useEffect will not be executed
+     */
+    // useEffect(() => {
+    //     console.log('counter2 state changed');
+    //     console.log('Showing reference of DOM element');
+    //     console.log(myRef);
+
+    // }, [counter1]);
+
+    /**
+     * ? Case 3: execute only when counter 1 is changed OR counter 2
+     * Every time counter1 is changed, useEffect will be executed
+     * Every time counter1 is changed, useEffect will be executed
+     */
     useEffect(() => {
-        console.log('component stated changed');
-        console.log('Showing reference of DOM element')
+        console.log('counter2 state changed');
+        console.log('Showing reference of DOM element');
         console.log(myRef);
-    })
+
+    }, [counter1, counter2]);
+
 
 
     return (
         <div>
         <h1>*** Exemple of useState(), useRef() and useEffect()  ***</h1>
-        <h2>COUNTER 1:{counter1}</h2>
-        <h2>COUNTER 2:{counter2}</h2>
+        <h2>COUNTER 1: {counter1}</h2>
+        <h2>COUNTER 2: {counter2}</h2>
         {/* Ref. Element */}
         <h4 ref={myRef}>Ref. Element Exemple</h4>
         {/**Changing counter's buttons */}
