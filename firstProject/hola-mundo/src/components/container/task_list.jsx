@@ -11,10 +11,13 @@ const TaskListComponent = () => {
 
     // Component state
     const [tasks, setTasks] = useState(defaultTask);
+    // Another state: loading. Each time inside is loading, once done, no loading: false
+    const [loading, setLoading] = useState(true);  
 
     // Lifecycle Component Control
     useEffect(() => {
         console.log('Task State modified');
+        setLoading(false); 
 
         return () => {
             console.log('TaskList component will unmount...')
