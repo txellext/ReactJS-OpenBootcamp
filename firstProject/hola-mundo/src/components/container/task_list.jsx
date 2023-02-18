@@ -3,6 +3,8 @@ import { Task } from '../../models/task.class'
 import { LEVELS } from '../../models/levels.enum';
 import TaskComponent from '../pure/task';
 
+// Import stylesheet of task.scss
+import '../../styles/task.scss';
 
 const TaskListComponent = () => {
 

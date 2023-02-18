@@ -3,6 +3,7 @@ import './App.css';
 import Greetings from './components/pure/greetings';
 import GreetingsF from './components/pure/greetingsF';
 import TaskListComponent from './components/container/task_list';
+import GreetingsStyled from './components/pure/greetingsStyled';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
           {/* <GreetingsF name="Txell"></GreetingsF> */}
 
           {/*List of tasks Component*/}
-          <TaskListComponent></TaskListComponent>
+          {/*<TaskListComponent></TaskListComponent>*/}
+          <GreetingsStyled name="Dawa"></GreetingsStyled>
 
       </header>
     </div>
