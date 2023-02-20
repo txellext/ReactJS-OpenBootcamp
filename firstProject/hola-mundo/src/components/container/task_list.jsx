@@ -5,6 +5,7 @@ import TaskComponent from '../pure/task';
 
 // Import stylesheet of task.scss
 import '../../styles/task.scss';
+import TaskForm from '../pure/forms/taskForm';
 
 const TaskListComponent = () => {
 
@@ -68,6 +69,7 @@ const TaskListComponent = () => {
                             </tbody>
                         </table>
                     </div>
+                    <TaskForm></TaskForm>
                 </div>
             </div>
 
