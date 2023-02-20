@@ -1,9 +1,9 @@
 /**
  * Class Component
  * 
- */
+ 
 import React, { Component } from 'react'
-import '../../styles/clock.scss';
+//import '../../styles/clock.scss';
 
 class Clock extends Component {
    constructor(props) {
@@ -48,7 +48,7 @@ class Clock extends Component {
       });
    }
 }
-export default Clock;
+export default Clock; */
 
 
 /**
@@ -56,3 +56,47 @@ export default Clock;
  * 
  */
 
+import React, { useState, useEffect } from 'react';
+
+const Clock = () => {
+
+    const initialState = {
+        date: new Date(),
+        name: 'Martín',
+        surname: 'SanJosé',
+        age: 0
+    };
+
+    const [state, setState] = useState(initialState);
+
+    useEffect(() => {
+        const timerID = setInterval(
+            () => tick(), 1000
+            );
+        return () => {
+            clearInterval (timerID);
+        };
+    });
+
+    function tick(){
+        // ? functionToChange(newValue)
+        setState({
+            date: new Date(),
+            age: state.age + 1,
+            name: state.name,
+            surname: state.surname
+        })
+    }
+
+    return (
+        <div>
+            <h2>
+                Current Time: {state.date.toLocaleTimeString()}
+            </h2>
+            <h3>{ state.name } { state.surname }</h3>
+            <h1>Age: { state.age }</h1>
+        </div>
+    );
+}
+
+export default Clock;
