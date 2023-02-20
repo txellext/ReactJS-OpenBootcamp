@@ -9,10 +9,13 @@ import '../../styles/task.scss';
 const TaskListComponent = () => {
 
     //Let's define an initial state
-    const defaultTask = new Task('Example', 'Default', true, LEVELS.NORMAL);
+    const defaultTask1 = new Task('Example1', 'Description1', true, LEVELS.NORMAL);
+    const defaultTask2 = new Task('Example2', 'Description2', false, LEVELS.URGENT);
+    const defaultTask3 = new Task('Example3', 'Description3', false, LEVELS.BLOCKING);
+
 
     // Component state
-    const [tasks, setTasks] = useState(defaultTask);
+    const [tasks, setTasks] = useState([defaultTask1, defaultTask2, defaultTask3]);
     // Another state: loading. Each time inside is loading, once done, no loading: false
     const [loading, setLoading] = useState(true);  
 
@@ -53,8 +56,15 @@ const TaskListComponent = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {/* TODO: Use For/Map to renderize a task list */}
-                                <TaskComponent task={ defaultTask } ></TaskComponent>
+                                { tasks.map((task, index) => {
+                                    return(
+                                            <TaskComponent 
+                                                key={index}  
+                                                task={task}>
+                                            </TaskComponent>
+                                        )
+                                    }
+                                )}
                             </tbody>
                         </table>
                     </div>
