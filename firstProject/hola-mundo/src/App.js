@@ -8,8 +8,8 @@ import GreetingsStyled from './components/pure/greetingsStyled';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      {/* <header className="App-header"> */}
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
           {/*Example Component*/}
           {/*<Greetings name="Txell"></Greetings>*/}
 
@@ -17,10 +17,10 @@ function App() {
           {/* <GreetingsF name="Txell"></GreetingsF> */}
 
           {/*List of tasks Component*/}
-          {/*<TaskListComponent></TaskListComponent>*/}
-          <GreetingsStyled name="Dawa"></GreetingsStyled>
+          <TaskListComponent></TaskListComponent>
+          {/* <GreetingsStyled name="Dawa"></GreetingsStyled> */}
 
-      </header>
+      {/* </header> */}
     </div>
   );
 }
