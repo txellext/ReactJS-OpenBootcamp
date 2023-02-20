@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 // Bootstrap added to our project
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 // ! Important: your own styles need to be placed under bootstrap
 import './index.css';
 import App from './App';

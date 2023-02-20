@@ -25,13 +25,24 @@ const TaskComponent = ({ task }) => {
                 <span> { task.description} </span>
             </td>
             <td className='align-middle'>
-                {/** TODO: substitute with a badge, diff. colour */}
+                {/** TODO: substitute with a badge, diff. colour 
+                with a switch case */}
                 <span> { task.level} </span>
             </td>
             
             <td className='align-middle'>
                 {/* TODO: substitute for Icons  */} 
-                <span> {task.completed} </span>
+                {/**With if */}
+                { task.completed ?
+                    (<i className='bi-toggle-on' style={ {color: 'green'} }></i>) 
+                    :
+                    (<i className='bi-toggle-on' style={ {color: 'grey'} }></i>) 
+                
+                }
+
+
+
+                <span> {task.completed ? 'Completed' : 'Pending'} </span>
             </td>
         </tr>
         
