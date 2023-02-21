@@ -18,10 +18,10 @@ function App() {
           {/* <GreetingsF name="Txell"></GreetingsF> */}
 
           {/*List of tasks Component*/}
-          {/*<TaskListComponent></TaskListComponent>*/}
+          <TaskListComponent></TaskListComponent>
           {/* <GreetingsStyled name="Dawa"></GreetingsStyled> */}
           {/**Gestión de eventos */}
-          <Father></Father>
+          {/*<Father></Father>*/}
 
       {/* </header> */}
     </div>
