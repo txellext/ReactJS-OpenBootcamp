@@ -5,7 +5,7 @@ import TaskComponent from '../pure/task';
 
 // Import stylesheet of task.scss
 import '../../styles/task.scss';
-import TaskForm from '../pure/forms/taskForm';
+import Taskform from '../pure/forms/taskForm';
 
 const TaskListComponent = () => {
 
@@ -48,6 +48,14 @@ const TaskListComponent = () => {
         setTasks(tempTasks);
     }
 
+    function addTask(task){
+        console.log('Add this Task: ', task);
+        const index = tasks.indexOf(task);
+        const tempTasks = [...tasks]; 
+        tempTasks.push(task);
+        setTasks(tempTasks);
+    }
+
     return (
         <div>
             <div className='col-12'>
@@ -85,10 +93,9 @@ const TaskListComponent = () => {
                             </tbody>
                         </table>
                     </div>
-                    <TaskForm></TaskForm>
                 </div>
             </div>
-
+            <Taskform added={addTask}></Taskform>
         </div>
     );
 };
