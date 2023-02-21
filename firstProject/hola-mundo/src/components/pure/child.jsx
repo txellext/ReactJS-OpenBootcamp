@@ -23,6 +23,12 @@ const Child = () => {
             <button onClick={() => pressButtonParams('Hello')}>
                 Button 3
             </button>
+            <input 
+            placeholder='Insert text' 
+            onFocus={() => console.log('Input Focus')}
+            onChange={(e) => console.log('Input changed:', e.target.value)}
+            onCopy={() => console.log('Copied text from Input')}
+            />
         </div>
     );
 }
