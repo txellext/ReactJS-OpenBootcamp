@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
-const Child = () => {
+const Child = ({name, send}) => {
+
+    const messageRef = useRef('')
 
     function pressButton(){
-        alert('Default Text');
+        const text = messageRef.current.value;
+        alert(`${text}`);
 
     }
 
@@ -12,7 +15,7 @@ const Child = () => {
     }
 
     return (
-        <div>
+        <div style={{background: 'cyan', padding: '30px'}}>
             <p onMouseOver={() => console.log('On Mouse Over')}> ChildComponent</p>
             <button onClick={() => console.log('Button 1 clicked')}>
                 Button 1
@@ -24,11 +27,15 @@ const Child = () => {
                 Button 3
             </button>
             <input 
-            placeholder='Insert text' 
+            placeholder='Send a text to your father' 
             onFocus={() => console.log('Input Focus')}
             onChange={(e) => console.log('Input changed:', e.target.value)}
             onCopy={() => console.log('Copied text from Input')}
+            ref = {messageRef}
             />
+            <button onClick={() => send(messageRef.current.value)}>
+                Send Message
+            </button>
         </div>
     );
 }
