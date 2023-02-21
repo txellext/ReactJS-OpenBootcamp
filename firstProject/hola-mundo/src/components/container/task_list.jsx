@@ -30,8 +30,8 @@ const TaskListComponent = () => {
         };
     }, [tasks]);
 
-    const changeCompleted = () => {
-        console.log('TODO: change state task')
+    function completeTask(task){
+        console.log('Complete this Task: ', task);
     }
 
     return (
@@ -61,7 +61,8 @@ const TaskListComponent = () => {
                                     return(
                                             <TaskComponent 
                                                 key={index}  
-                                                task={task}>
+                                                task={task}
+                                                complete={completeTask}>
                                             </TaskComponent>
                                         )
                                     }
