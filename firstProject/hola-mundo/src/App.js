@@ -4,6 +4,7 @@ import Greetings from './components/pure/greetings';
 import GreetingsF from './components/pure/greetingsF';
 import TaskListComponent from './components/container/task_list';
 import GreetingsStyled from './components/pure/greetingsStyled';
+import Father from './components/container/father';
 
 function App() {
   return (
@@ -17,8 +18,10 @@ function App() {
           {/* <GreetingsF name="Txell"></GreetingsF> */}
 
           {/*List of tasks Component*/}
-          <TaskListComponent></TaskListComponent>
+          {/*<TaskListComponent></TaskListComponent>*/}
           {/* <GreetingsStyled name="Dawa"></GreetingsStyled> */}
+          {/**Gestión de eventos */}
+          <Father></Father>
 
       {/* </header> */}
     </div>
