@@ -32,6 +32,20 @@ const TaskListComponent = () => {
 
     function completeTask(task){
         console.log('Complete this Task: ', task);
+        const index = tasks.indexOf(task);
+        const tempTasks = [...tasks]; // All tasks in a temporal variable
+        tempTasks[index].completed = !tempTasks[index].completed; // If it was true is false and viceversa
+        // We update the state of the component with the new list 
+        // and it will update the iteration of the tasks in order to show task updated
+        setTasks(tempTasks);
+    }
+
+    function removedTask(task){
+        console.log('Delete this Task: ', task);
+        const index = tasks.indexOf(task);
+        const tempTasks = [...tasks]; 
+        tempTasks.splice(index,1); // From index element we delete 1 element
+        setTasks(tempTasks);
     }
 
     return (
@@ -62,7 +76,8 @@ const TaskListComponent = () => {
                                             <TaskComponent 
                                                 key={index}  
                                                 task={task}
-                                                complete={completeTask}>
+                                                complete={completeTask}
+                                                removed={removedTask}>
                                             </TaskComponent>
                                         )
                                     }
