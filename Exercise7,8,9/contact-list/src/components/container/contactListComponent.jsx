@@ -8,10 +8,10 @@ const ContactListComponent = () => {
     const defaultContact2 = new Contact('Contact2', 'contact2@gmail.com', true)
     const defaultContact3 = new Contact('Contact3', 'contact3@gmail.com', false)
 
-    const [contacts, setContact] = useState([defaultContact1]);
+    const [contacts, setContact] = useState([defaultContact1, defaultContact2, defaultContact3]);
 
     useEffect(() => {
-        console.log('Contact state modified')
+        console.log('Contact list state modified')
         return () => {
             console.log('ContactListComponent is going to unmount...')
         };
@@ -24,13 +24,24 @@ const ContactListComponent = () => {
 
     return (
         <div>
-            <div>
-                <h1>
-                    Contact List: 
-                </h1>
+            <h1>
+                Contact List: 
+            </h1>
+            <div className='card-container'>
+                {contacts.map((contact,index) => {
+                    return(
+                            <ContactComponent 
+                            key={index} 
+                            contact={contact}>
+                            </ContactComponent>
+                        )
+                    } 
+                )}
+
             </div>
-            {/**TODO: add for/map to render a list */}
-            <ContactComponent contact={defaultContact1}></ContactComponent>
+
+            {/* <ContactFromComponent></ContactFromComponent> */}
+
 
         </div>
     );
