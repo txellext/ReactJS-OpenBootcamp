@@ -17,8 +17,13 @@ const ContactListComponent = () => {
         };
     }, [contacts]);
 
-    const changeConnected = (id) => {
-        console.log('TODO: Change connected of a contact')
+    function connectedContact(contact){
+        console.log('Connected Contact: ', contact);
+        const index = contacts.indexOf(contact);
+        const tempContacts = [...contacts];
+        tempContacts[index].connected = !tempContacts[index].connected;
+        setContact(tempContacts);
+
     }
 
 
@@ -32,17 +37,14 @@ const ContactListComponent = () => {
                     return(
                             <ContactComponent 
                             key={index} 
-                            contact={contact}>
+                            contact={contact}
+                            connected={connectedContact}>
                             </ContactComponent>
                         )
                     } 
                 )}
 
             </div>
-
-            {/* <ContactFromComponent></ContactFromComponent> */}
-
-
         </div>
     );
 };
