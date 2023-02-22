@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Contact } from '../../contact.class';
 
 
-const ContactComponent = ({ contact, connected }) => {
+const ContactComponent = ({ contact, connected, deleted }) => {
 
     useEffect(() => {
         console.log('contact created')
@@ -21,6 +21,7 @@ const ContactComponent = ({ contact, connected }) => {
                 This contact is: 
                 <p onClick={() => connected(contact)}> {contact.connected ? 'Online' : 'Offline'} </p> 
             </h4>
+            <button onClick={() => deleted(contact)}>Delete</button>
         </div>
     );
 };
@@ -29,6 +30,7 @@ const ContactComponent = ({ contact, connected }) => {
 ContactComponent.propTypes = {
     contact: PropTypes.instanceOf(Contact).isRequired,
     connected: PropTypes.func.isRequired,
+    deleted: PropTypes.func.isRequired,
 };
 
 

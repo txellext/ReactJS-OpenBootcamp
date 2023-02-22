@@ -8,7 +8,7 @@ const ContactListComponent = () => {
     const defaultContact2 = new Contact('Contact2', 'contact2@gmail.com', true)
     const defaultContact3 = new Contact('Contact3', 'contact3@gmail.com', false)
 
-    const [contacts, setContact] = useState([defaultContact1, defaultContact2, defaultContact3]);
+    const [contacts, setContacts] = useState([defaultContact1, defaultContact2, defaultContact3]);
 
     useEffect(() => {
         console.log('Contact list state modified')
@@ -22,10 +22,22 @@ const ContactListComponent = () => {
         const index = contacts.indexOf(contact);
         const tempContacts = [...contacts];
         tempContacts[index].connected = !tempContacts[index].connected;
-        setContact(tempContacts);
+        setContacts(tempContacts);
 
     }
 
+
+    function deleteContact(contact){
+        console.log('Deleted Contact: ', contact);
+        const index = contacts.indexOf(contact);
+        const tempContacts = [...contacts];
+        tempContacts.splice(index,1);
+        setContacts(tempContacts);
+
+
+        
+
+    }
 
     return (
         <div>
@@ -38,7 +50,8 @@ const ContactListComponent = () => {
                             <ContactComponent 
                             key={index} 
                             contact={contact}
-                            connected={connectedContact}>
+                            connected={connectedContact}
+                            deleted={deleteContact}>
                             </ContactComponent>
                         )
                     } 
