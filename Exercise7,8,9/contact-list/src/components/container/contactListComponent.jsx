@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Contact } from '../../contact.class';
 import ContactComponent from '../pure/contactComponent';
+import ContactFormComponent from '../pure/form/contactFormComponent';
 
 const ContactListComponent = () => {
 
@@ -33,11 +34,16 @@ const ContactListComponent = () => {
         const tempContacts = [...contacts];
         tempContacts.splice(index,1);
         setContacts(tempContacts);
-
-
-        
-
     }
+
+    function addContact(contact){
+        console.log('Added Contact: ', contact);
+        const index = contacts.indexOf(contact);
+        const tempContacts = [...contacts];
+        tempContacts.push(contact);
+        setContacts(tempContacts); 
+    }
+        
 
     return (
         <div>
@@ -58,6 +64,7 @@ const ContactListComponent = () => {
                 )}
 
             </div>
+            <ContactFormComponent add={addContact}></ContactFormComponent>
         </div>
     );
 };
