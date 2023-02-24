@@ -61,9 +61,15 @@ const OptionalRender = () => {
             {/** Optional button */}
             { optionalButton }
             {/**N messages unread */}
-            { nMessages > 0 && <p>You have {nMessages} new messages...</p>} 
-            { nMessages === 0 && <p>There are no new messages</p> }
-            <button onClick={addMessages}>Add new Message</button>
+            {/* { nMessages > 0 && nMessages === 1 && <p>You have {nMessages} new message...</p>} 
+            { nMessages > 1 && <p>You have {nMessages} new messages...</p>} 
+            { nMessages === 0 && <p>There are no new messages</p> } */}
+            {/* Ternary Operator */}
+            { nMessages > 0 ?
+                <p>You have {nMessages} new message{nMessages > 1 ? 's' : null}...</p> :
+                <p>There are no new messages</p> 
+            }
+            <button onClick={addMessages}> {nMessages === 0 ? 'Add your first message': 'Add new Message'} </button>
         </div>
     );
 }
