@@ -14,12 +14,13 @@ function App() {
         {/*<Example1></Example1>*/}
         {/*<Example2></Example2>*/}
         {/*<MyContextComponent></MyContextComponent>*/}
-        <Example4 name="Dawa">
-        {/**Everything inside, is treated like props.children */}
+        {/* <Example4 name="Dawa">
+        Everything inside, is treated like props.children
+
           <h3>
             props.children info
           </h3>
-        </Example4>
+        </Example4> */}
       </header>
     </div>
   );
