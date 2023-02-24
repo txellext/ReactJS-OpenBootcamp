@@ -16,10 +16,14 @@ const LogoutButton = ({logoutAction}) => {
     )
 }
 
+// ? (true Expresion) && expresion => expresion renderized
+// ? (false Expresion) && expresion => no expresion renderized
 
 const OptionalRender = () => {
 
     const [acces, setAcces] = useState(true);
+
+    const [nMessages, setNMessages] = useState(0); // messages unread
 
     // const updateAccess = () => {
     //     setAcces(!acces);
@@ -47,9 +51,19 @@ const OptionalRender = () => {
         optionalButton = <LoginButton loginAction={loginAction}></LoginButton>
     }
 
+// Unread messages
+    let addMessages = () => {
+        setNMessages(nMessages + 1);
+    }
+
     return (
         <div>
+            {/** Optional button */}
             { optionalButton }
+            {/**N messages unread */}
+            { nMessages > 0 && <p>You have {nMessages} new messages...</p>} 
+            { nMessages === 0 && <p>There are no new messages</p> }
+            <button onClick={addMessages}>Add new Message</button>
         </div>
     );
 }
