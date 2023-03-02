@@ -50,10 +50,51 @@ const TaskListComponent = () => {
 
     function addTask(task){
         console.log('Add this Task: ', task);
-        const index = tasks.indexOf(task);
         const tempTasks = [...tasks]; 
         tempTasks.push(task);
         setTasks(tempTasks);
+    }
+
+    const Table = () => {
+        return(
+            <table>
+                <thead>
+                    <tr>
+                        <th scope='col'> Title </th>
+                        <th scope='col'> Description </th>
+                        <th scope='col'> Priority </th>
+                        <th scope='col'> Actions </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    { tasks.map((task, index) => {
+                        return(
+                                <TaskComponent 
+                                    key={index}  
+                                    task={task}
+                                    complete={completeTask}
+                                    removed={removedTask}>
+                                </TaskComponent>
+                            )
+                        }
+                    )}
+                </tbody>
+            </table>
+        )
+    }
+
+    let tasksTable = <Table></Table>
+
+    if(tasks.length > 0 ) {
+        tasks.Table = <Table></Table>
+    }else{
+        tasksTable = (
+            <div>
+                <h3> There are no tasks to show </h3>
+                <h4> Please, create one </h4>
+            </div>
+        
+        )
     }
 
     return (
@@ -69,29 +110,7 @@ const TaskListComponent = () => {
                     </div>
                     {/**Body Card*/}
                     <div className='card-body' data-mdb-perfect-scrollbar='true' style={ {position: 'relative', height:'400px'} }>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th scope='col'> Title </th>
-                                    <th scope='col'> Description </th>
-                                    <th scope='col'> Priority </th>
-                                    <th scope='col'> Actions </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                { tasks.map((task, index) => {
-                                    return(
-                                            <TaskComponent 
-                                                key={index}  
-                                                task={task}
-                                                complete={completeTask}
-                                                removed={removedTask}>
-                                            </TaskComponent>
-                                        )
-                                    }
-                                )}
-                            </tbody>
-                        </table>
+                        {tasksTable}
                     </div>
                 </div>
             </div>

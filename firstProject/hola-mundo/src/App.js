@@ -19,14 +19,14 @@ function App() {
           {/* <GreetingsF name="Txell"></GreetingsF> */}
 
           {/*List of tasks Component*/}
-          {/* <TaskListComponent></TaskListComponent> */}
+          <TaskListComponent></TaskListComponent>
           {/* <GreetingsStyled name="Dawa"></GreetingsStyled> */}
           {/**Gestión de eventos */}
           {/*<Father></Father>*/}
       {/* Exemples of conditional render */}
-      <OptionalRender></OptionalRender>
+      {/* <OptionalRender></OptionalRender> */}
       {/* </header> */}
-    </div>
+    </div>  
   );
 }
 
