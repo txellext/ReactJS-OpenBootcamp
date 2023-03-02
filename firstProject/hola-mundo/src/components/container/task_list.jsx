@@ -23,7 +23,10 @@ const TaskListComponent = () => {
     // Lifecycle Component Control
     useEffect(() => {
         console.log('Task State modified');
-        setLoading(false); 
+        setTimeout(() => {
+            setLoading(false); 
+   
+        }, 2000);
 
         return () => {
             console.log('TaskList component will unmount...')
@@ -97,6 +100,12 @@ const TaskListComponent = () => {
         )
     }
 
+    const loadingStyle = {
+        color: 'grey',
+        fontSize: '30px',
+        fontWeight: 'bold'
+    }
+
     return (
         <div>
             <div className='col-12'>
@@ -110,7 +119,8 @@ const TaskListComponent = () => {
                     </div>
                     {/**Body Card*/}
                     <div className='card-body' data-mdb-perfect-scrollbar='true' style={ {position: 'relative', height:'400px'} }>
-                        {tasksTable}
+                        {/**TODO: Add loading Spinner */}
+                        {loading ? (<p style={loadingStyle}>Loading tasks..</p>): tasksTable}
                     </div>
                 </div>
             </div>
