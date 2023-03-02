@@ -34,9 +34,9 @@ const Rectangle = () => {
     const tempRs = Math.floor(Math.random()* 256);
     setRs(tempRs);
     const tempGs = Math.floor(Math.random()* 256);
-    setRs(tempGs);
+    setGs(tempGs);
     const tempBs = Math.floor(Math.random()* 256);
-    setRs(tempBs);
+    setBs(tempBs);
     };
 
     const intervalColour = () => {
