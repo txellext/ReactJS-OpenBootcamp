@@ -11,13 +11,9 @@ const Rectangle = () => {
     const [Rs, setRs] = useState(0);
     const [Gs, setGs] = useState(0);
     const [Bs, setBs] = useState(0);
+    const [colourInterval, setColourInterval] = useState(0);
 
-    useEffect(() => {
-        console.log('Rs or Gs or Bs state modified')
-        return () => {
-            console.log('Rectangle component is going to unmount...')
-        };
-    }, [Rs,Gs,Bs]);
+
 
     let initialColour = {
         backgroundColor: `rgb(${Rs},${Gs},${Bs})`,
@@ -26,9 +22,15 @@ const Rectangle = () => {
         color: 'white',
         margin: 50
     };
+  
+    useEffect(() => {
+        console.log('Rs or Gs or Bs state modified')
+        return () => {
+            console.log('Rectangle component is going to unmount...')
+        };
+    }, [Rs,Gs,Bs]);
 
-    const intervalIdSetColour = 0;
-    
+
     const changeColourRandom = () => {
     console.log("Mouse enter rectangle and inside");
     const tempRs = Math.floor(Math.random()* 256);
@@ -39,20 +41,21 @@ const Rectangle = () => {
     setBs(tempBs);
     };
 
-    const intervalColour = () => {
-        intervalIdSetColour = setInterval(changeColourRandom, 1000)
+
+    const onChangeColour = () => {
+        setColourInterval(setInterval(changeColourRandom, 1000));
     };
    
 
-    const stopColour = () => {
+    const onstopColour = () => {
         console.log('Mouse leave rectangle')
         // TODO: not working, see how to clear interval 
-        clearInterval(intervalIdSetColour)
+        clearInterval(colourInterval)
     }
 
     return (
         <div>
-            <div onMouseEnter={intervalColour} onMouseLeave={stopColour} onDoubleClick={stopColour} style={ initialColour }></div>
+            <div onMouseEnter={onChangeColour} onMouseLeave={onstopColour} onDoubleClick={onstopColour} style={ initialColour }></div>
         </div>
     );
 };
