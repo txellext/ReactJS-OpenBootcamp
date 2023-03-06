@@ -12,7 +12,7 @@ const Taskform = ({added, length}) => {
     const levelRef = useRef(LEVELS.NORMAL);
 
     function addTask(e){
-        e.preventDefault();
+        e.preventDefault(); // Evit page reload because of post effect
         const newTask = new Task(
             nameRef.current.value,
             descriptionRef.current.value,

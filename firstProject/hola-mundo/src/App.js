@@ -6,6 +6,7 @@ import TaskListComponent from './components/container/task_list';
 import GreetingsStyled from './components/pure/greetingsStyled';
 import Father from './components/container/father';
 import OptionalRender from './components/pure/optionalRender';
+import LoginFormik from './components/pure/forms/loginFormik';
 
 function App() {
   return (
@@ -19,13 +20,15 @@ function App() {
           {/* <GreetingsF name="Txell"></GreetingsF> */}
 
           {/*List of tasks Component*/}
-          <TaskListComponent></TaskListComponent>
+          {/* <TaskListComponent></TaskListComponent> */}
           {/* <GreetingsStyled name="Dawa"></GreetingsStyled> */}
           {/**Gestión de eventos */}
           {/*<Father></Father>*/}
       {/* Exemples of conditional render */}
       {/* <OptionalRender></OptionalRender> */}
       {/* </header> */}
+      {/**Ejemplo uso de formik y YUP */}
+      <LoginFormik></LoginFormik>
     </div>  
   );
 }
