@@ -7,6 +7,7 @@ import GreetingsStyled from './components/pure/greetingsStyled';
 import Father from './components/container/father';
 import OptionalRender from './components/pure/optionalRender';
 import LoginFormik from './components/pure/forms/loginFormik';
+import RegisterFormik from './components/pure/forms/registerFormik';
 
 function App() {
   return (
@@ -28,7 +29,8 @@ function App() {
       {/* <OptionalRender></OptionalRender> */}
       {/* </header> */}
       {/**Ejemplo uso de formik y YUP */}
-      <LoginFormik></LoginFormik>
+      {/* <LoginFormik></LoginFormik> */}
+      <RegisterFormik></RegisterFormik>
     </div>  
   );
 }

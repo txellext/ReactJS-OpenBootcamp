@@ -21,15 +21,15 @@ const RegisterFormik = () => {
 
     const registerSchema = Yup.object().shape(
         {
-            username: Yup.string.()
+            username: Yup.string()
                 .min(6, 'username too short')
                 .max(12, 'Username too long') 
                 .required('Username is required'),
             email: Yup.string()
                 .email('Invalid Email format')
                 .required('Email is required'),
-            role: Yup.string().
-                oneOf([ROLES.USER, ROLES.ADMIN], 'You must select a role: User/Admin')
+            role: Yup.string()
+                .oneOf([ROLES.USER, ROLES.ADMIN], 'You must select a role: User/Admin')
                 .required('Role is required'),
             password: Yup.string()
                 .min(8, 'Password too short')
@@ -77,7 +77,7 @@ const RegisterFormik = () => {
                             
                             {/*Username Errors */}
                             {
-                                username.email && touched.username &&
+                                errors.username && touched.username &&
                                 (
                                     <ErrorMessage name="username" component='div'></ErrorMessage> 
                                 )                                   
