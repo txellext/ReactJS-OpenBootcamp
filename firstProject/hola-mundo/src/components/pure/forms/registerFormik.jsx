@@ -1,9 +1,9 @@
 import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+
 // Models
 import { ROLES } from '../../../models/roles.enum';
-
 import { User } from '../../../models/user.class';
 
 const RegisterFormik = () => {
@@ -19,6 +19,7 @@ const RegisterFormik = () => {
 
     }
 
+    // Validation schema: object mathcing initialvalues
     const registerSchema = Yup.object().shape(
         {
             username: Yup.string()
@@ -28,9 +29,9 @@ const RegisterFormik = () => {
             email: Yup.string()
                 .email('Invalid Email format')
                 .required('Email is required'),
-            role: Yup.string()
-                .oneOf([ROLES.USER, ROLES.ADMIN], 'You must select a role: User/Admin')
-                .required('Role is required'),
+            // role: Yup.string()
+            //     .oneOf([ROLES.USER, ROLES.ADMIN], 'You must select a role: User/Admin')
+            //     .required('Role is required'),
             password: Yup.string()
                 .min(8, 'Password too short')
                 .required('Password is required'),
@@ -45,9 +46,9 @@ const RegisterFormik = () => {
         }
     )
 
-    const submit = () => (
+    const submit = (values) => {
         alert('Register User')
-    )
+    }   
 
     return (
         <div>
@@ -55,7 +56,7 @@ const RegisterFormik = () => {
             <Formik
                 initialValues = {initialValues}
                 // *** Yup Validation Schema ***
-                validationSchema = { registerSchema }  
+                validationSchema = {registerSchema}  
 
                 // *** onSubmit Event ***         
                 onSubmit={async (values) => {
@@ -94,6 +95,7 @@ const RegisterFormik = () => {
                                 )                                   
                             }
 
+
                             <label htmlFor="password">Password</label>
                             <Field
                                 id="password"
@@ -109,7 +111,7 @@ const RegisterFormik = () => {
                                 )
                             }
 
-                            <label htmlFor="confirm">Password</label>
+                            <label htmlFor="confirm">Confirm Password</label>
                             <Field
                                 id="confirm"
                                 name="confirm"
