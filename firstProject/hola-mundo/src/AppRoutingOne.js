@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import HomePage from './pages/home/HomePage';
 import NotFoundPage from './pages/404/NotFoundPage';
 import AboutPage from './pages/about-faqs/AboutPage';
+import ProfilePage from './pages/profile/ProfilePage';
 
 function AppRoutingOne() {
   return (
@@ -23,6 +24,7 @@ function AppRoutingOne() {
             <Route path='*' element= { <NotFoundPage/> } />
             <Route path='about' element={ <AboutPage />} />
             <Route path="faqs" element={ <AboutPage />} />
+            <Route path='/profile' element={ <ProfilePage /> } />
           </Routes>
         </main>
       </div>
