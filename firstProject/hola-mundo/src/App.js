@@ -30,7 +30,7 @@ function App() {
       {/* </header> */}
       {/**Ejemplo uso de formik y YUP */}
       {/* <LoginFormik></LoginFormik> */}
-      <RegisterFormik></RegisterFormik>
+      {/* <RegisterFormik></RegisterFormik> */}
     </div>  
   );
 }

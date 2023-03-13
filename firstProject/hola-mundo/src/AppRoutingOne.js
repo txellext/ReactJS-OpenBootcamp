@@ -3,6 +3,7 @@ import HomePage from './pages/home/HomePage';
 import NotFoundPage from './pages/404/NotFoundPage';
 import AboutPage from './pages/about-faqs/AboutPage';
 import ProfilePage from './pages/profile/ProfilePage';
+import TaskPage from './pages/tasks/TaskPage';
 
 function AppRoutingOne() {
   return (
@@ -23,6 +24,7 @@ function AppRoutingOne() {
             {/*404 - Page Not Found */}
             <Route path='*' element= { <NotFoundPage/> } />
             <Route path='about' element={ <AboutPage />} />
+            <Route path='/tasks' element={ <TaskPage />} />
             <Route path="faqs" element={ <AboutPage />} />
             <Route path='/profile' element={ <ProfilePage /> } />
           </Routes>

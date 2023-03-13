@@ -5,6 +5,10 @@ const ProfilePage = () => {
 
     const history = useNavigate();
 
+    const navigateTo = (path) => {
+        history(path);
+    }
+
     const goBack = () => {
         history(-1)
     }
@@ -12,10 +16,12 @@ const ProfilePage = () => {
     return (
         <div>
             <h1> Your Profile </h1>
+            <button onClick={ () => navigateTo('/tasks') }> Tasks</button>
             <div>
                 <button onClick={ goBack }>
                     Go Back
                 </button>
+
             </div>
         </div>
     );
