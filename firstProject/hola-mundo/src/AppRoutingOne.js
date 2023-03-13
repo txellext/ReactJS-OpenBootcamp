@@ -8,8 +8,9 @@ function AppRoutingOne() {
     {/**Espera un conjunto de rutas */}
       <Routes> 
         {/**Cargamos una ruta exacta de la raíz del componente HomePage */}
-        <Route exact path='/' element={ <HomePage/> } />
-        <Route element= { <NotFoundPage/> } />
+        <Route path='/' element={ <HomePage/> } />
+        {/*404 - Page Not Found */}
+        <Route path='*' element= { <NotFoundPage/> } />
 
       </Routes>
     </Router>  
