@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+<br>
+<div align="center">
+    <img src="/firstProject/ToDo/public/openbootcamp_logo.jpg" alt="openbootcamp logo" width="" height="300" /> <br />
+    <h1 align="center"> ReactJS Bootcamp </h1>
+    <div align="center">
+        <a href="https://open-bootcamp.com/cursos/react"> View React course on OpenBootcamp </a>
+    </div>
+</div>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
 
-## Available Scripts
+## 🚀 About OpenBootcamp
+OpenBootcamp is an online bootcamp that offers a free, self-paced coding program in the Spanish language covering topics like Python, JavaScript, SQL, React, React, and Angular. At OpenBootcamp, there are different learning roadmaps tailored for each type of student, both those just starting in the world of development as well as those with advanced knowledge looking to upskill. Each user finds the level that suits their needs, including the initial bootcamp 'Learn to Program From Scratch', as well as training in the three specialties of Front-End, Back-End and Full-Stack. OpenBootcamp is continually updating their catalog of course material to stay in line with market demands, always with the objective of providing its community with permanent and free access to this updated and high-quality training. 
 
-In the project directory, you can run:
+OpenBootcamp is designed for everyone and there are no prerequisites. 
 
-### `npm start`
+OpenBootcamp is designed to get students jobs and the organization has a hiring network of over 50 companies. OpenBootcamp works with students to help them find a match that suits their skills.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+<br>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 👷 Authors
 
-### `npm run build`
+|                     | Name                | GitHub              |
+| :------------------ | :------------------ | :------------------ |
+| <a href="https://github.com/txellext"><img src="https://avatars.githubusercontent.com/u/108218084?v=4" width="60" height="60" style="border-radius: 50%" alt="jar avatar"></a> | **Txell Amigó** | [**@txellext**](https://github.com/txellext) |   
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 🦋 Goals
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React: Hooks, events, props, conditional rendering
+- Routing
+- Forms: Formik, Yup
+- Redux
+- Debugging skills
+- Axios
+- Fetch
+- Jest
 
-### `npm run eject`
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🌐 Built with 
+- JavaScript 
+- Bootstrap 
+- React
+- Visual Studio Code 
+- HTML
+- CSS / Sass
+- Material UI
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="center"> < /> with ❤️ in BCN</p>
