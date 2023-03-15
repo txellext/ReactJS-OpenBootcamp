@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, Navigate } from 'react-router-dom';
 import HomePage from './pages/home/HomePage';
 import NotFoundPage from './pages/404/NotFoundPage';
 import AboutPage from './pages/about-faqs/AboutPage';
@@ -7,6 +7,10 @@ import TaskPage from './pages/tasks/TaskPage';
 import TaskDetailPage from './pages/tasks/TaskDetailPage.jsx/TaskDetailPage';
 
 function AppRoutingOne() {
+
+  const logged = false; // no to get profile page
+
+
   return (
     <Router>
       <div>
@@ -27,7 +31,7 @@ function AppRoutingOne() {
             <Route path='about' element={ <AboutPage />} />
             <Route path='/tasks' element={ <TaskPage />} />
             <Route path="faqs" element={ <AboutPage />} />
-            <Route path='/profile' element={ <ProfilePage /> } />
+            <Route path='/profile' element={ logged ? <ProfilePage /> : <Navigate to='/' /> } />
             <Route path='/tasks/:id' element={ <TaskDetailPage/> } />
           </Routes>
         </main>
