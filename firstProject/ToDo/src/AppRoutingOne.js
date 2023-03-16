@@ -7,6 +7,7 @@ import ProfilePage from './pages/profile/ProfilePage';
 import TaskPage from './pages/tasks/TaskPage';
 import TaskDetailPage from './pages/tasks/TaskDetailPage.jsx/TaskDetailPage';
 import LoginPage from './pages/auth/LoginPage';
+import StatePage from './pages/home/StatePage';
 
 function AppRoutingOne() {
 
@@ -34,6 +35,7 @@ function AppRoutingOne() {
           <Routes> 
             {/**Cargamos una ruta exacta de la raíz del componente HomePage */}
             <Route path='/' element={ <HomePage/> } />
+            <Route path='/online-state' element={ <StatePage/> } />
             <Route path='/login' element = { logged ? <HomePage /> : <LoginPage /> } >
             </Route>
             {/*404 - Page Not Found */}
@@ -46,12 +48,12 @@ function AppRoutingOne() {
               <ProfilePage /> 
               : 
               (<Navigate to='/login' />) }>
-                {
+                {/* {
                   !logged ?
                   alert('You must be logged in. Redirecting to Home..')
                   :
                   null
-                }
+                } */}
               </Route>
             <Route path='/tasks/:id' element={ <TaskDetailPage/> } />
           </Routes>
